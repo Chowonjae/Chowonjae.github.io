@@ -260,7 +260,7 @@
               </p>
               <a
                 href="#"
-                onclick="$('.popup_base').css('height', $(document).height());$('.digital').show();"
+                onclick="$('.popup_base').css('height', $(document).height());$('.doeran').show();"
                 >View Explanation</a
               >&nbsp;&nbsp;&nbsp;
               <!-- <a href="https://github.com/Chowonjae/BusStatus">Go to GitHub</a> -->
@@ -443,6 +443,35 @@
     </div>
 
     <!-- project popup start -->
+    <div class="popup_base doeran">
+      <div class="popup_content">
+        <p class="btn_xpop">
+          <a href="#" onclick="$(this).parent().parent().parent().hide();"></a>
+        </p>
+        <ul class="pop_list">
+          <li>
+            <h2 class="tit_pop">도란도란</h2>
+            <img class="pop_img" src="" />
+            <div class="pop_txt">
+              <p>
+                <p class="bold">기간</p> : 2023.04 ~ 2023.05<br/>
+                <p class="bold">팀 구성</p> : 팀 (6 명)<br/>
+                <p class="bold">기술</p> : Java, Spring Boot, JPA, MySQL<br/>
+                <p class="bold">담당 영역</p> : Back-end 파트를 담당했습니다.<br />
+                OAuth2.0 간편로그인과, JWT Token, Filter, reisuue, 로그아웃, 방 초대 링크 생성, 질문 출력 API를 작성했습니다.<br/>
+                - 로그인 : 안드로이드 앱에서 소셜 로그인을 진행할 때, 받은 인가 코드를 소셜 로그인 서버로 재전송을 하여 사용자의 OuathId와 정보를 받아옵니다.
+                받아온 정보를 바탕으로 회원가입과, 로그인을 진행시키며 이렇게 만들어진 사용자 ID를 통해서 우리 서버의 JWT토큰을 생성합니다.<br/>
+                만들어진 토큰을 header에 담아서 전송해 주었으며, 토큰의 기간이 만료가 되었을 경우 reissue API를 통해서 access와 refresh Token을 갱신 시켜줍니다.<br/>
+                이 모든 과정은 Filter를 거치게 되며 Filter에서 Access Token에서 사용자의 ID를 추출하여 Controller에 전달하는 방식을 통하여 직접적으로 유저의 ID가 오가지 않도록 하였습니다.<br/>
+                또한, Access Token이 회손되었거나 null로 들어오면 Http status code 401을 보내도록 작성하였습니다.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- project popup start -->
     <div class="popup_base jobtender">
       <div class="popup_content">
         <p class="btn_xpop">
@@ -456,13 +485,12 @@
               <p>
                 <p class="bold">기간</p> : 2023.02 ~ 2023.04<br/>
                 <p class="bold">팀 구성</p> : 팀 (6 명)<br/>
-                <p class="bold">기술</p> : Java, Spring Boot, JPA, MySQL, React, Redux/toolkit, JS, HTML5, CSS3<br/>
+                <p class="bold">기술</p> : Java, Spring Boot, JPA, Python, Flask, MySQL, React, Redux/toolkit, JS, HTML5, CSS3<br/>
                 <p class="bold">담당 영역</p> : Back-end와 Front-end, 데이터 크롤링을 담당했습니다.<br />
-                로그인, 회원가입, 마이페이지, 메인페이지, 롤링페이퍼 파트를 담당했습니다.<br/>
-                사용자가 멘토링을 완료하게 되면 롤링페이지에 글을 남길 수 있고, 멘토의 경우 롤링페이퍼를 꾸밀 수 있습니다.
-                로그인의 경우 받아온 JWT Token을 SessionStorage에 저장을 하였고, Ajax로 서버와 HTTP 통신을 했습니다. 
-                Ajax의 경우 모듈화를 진행하여 코드의 재사용성을 증가시켰으며, 
-                받아온 데이터들은 Redux/toolkit을 통해서 상태관리를 하였습니다.
+                사용자가 가치관 기반 키워드를 선택하면 Spring Boot 서버와 Flask 서버로 데이터를 보내고 분석된 결과 값을 다시 전송해 주는 API를 작성했습니다.<br/>
+                기업의 데이터들을 가져올 수 있도록 크롤링 작업을 일정 기간마다 진행할 수 있도록 CronTab을 사용하여 스케쥴링 했습니다.<br/>
+                스케쥴링으로 가져온 데이터는 자동으로 DB에 값을 갱신하도록 하였습니다.<br/>
+                또한, 마이페이지를 React로 화면을 구성하였고 Ajax로 HTTP 통신 후 데이터를 Redux를 통해서 상태관리를 하였습니다.<br/>
               </p>
             </div>
           </li>
